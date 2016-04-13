@@ -12,16 +12,25 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    @Autowired
-    TreatmentService treatmentService;
+	@Autowired
+	TreatmentService treatmentService;
 
-    @RequestMapping("/")
-    public String home(Model model) {
+	@RequestMapping(value= {"/", "/home"})
+	public String home(Model model)
+	{
+		List<Treatment> headTreatments = treatmentService.getHeadTreatments(3);
+
+		model.addAttribute("headTreatments", headTreatments);
+		return "home";
+	}
+
+	@RequestMapping("/treatmentlist")
+	public String treatmentList(Model model)
+	{
         List<Treatment> headTreatments = treatmentService.getHeadTreatments(3);
 
         model.addAttribute("headTreatments", headTreatments);
-        return "home";
-    }
 
-
+        return "treatmentlist";
+	}
 }

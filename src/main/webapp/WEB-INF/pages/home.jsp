@@ -40,7 +40,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="<c:url value="/treatmentlist" />">Treatments</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -52,6 +52,15 @@
                                 <li class="dropdown-header">Nav header</li>
                                 <li><a href="#">Separated link</a></li>
                                 <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                               role="button" aria-haspopup="true" aria-expanded="false">Language
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="?lang=de">De</a></li>
+                                <li><a href="?lang=en">En</a></li>
                             </ul>
                         </li>
                     </ul>
