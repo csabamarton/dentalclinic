@@ -142,11 +142,11 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-        <c:forEach var="headTreatment" items="${headTreatments}">
+        <c:forEach var="treatment" items="${headTreatments}">
             <div class="col-lg-4">
                 <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-                <h2>${headTreatment.treatmentName}</h2>
-                <p>${headTreatment.description}</p>
+                <h2>${treatment.treatmentName}</h2>
+                <p>${treatment.description}</p>
                 <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
         </c:forEach>

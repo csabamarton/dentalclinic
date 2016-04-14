@@ -1,10 +1,12 @@
 package com.smdental.controller;
 
+import com.google.common.primitives.Longs;
 import com.smdental.model.Treatment;
 import com.smdental.service.TreatmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -34,8 +36,12 @@ public class HomeController {
 		return "treatmentlist";
 	}
 
-	@RequestMapping("/treatment")
-	public String getTreatment(Model model) {
-		return "treatment";
+	@RequestMapping("/treatment/{treatmentId}")
+	public String getTreatment(@PathVariable("treatmentId") String treatmentId,
+			Model model) {
+		Treatment treatment = treatmentService.getTreatmentById(Longs.tryParse(treatmentId));
+		model.addAttribute("treatment", treatment);
+
+		return "treatmentdetails";
 	}
 }

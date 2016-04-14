@@ -29,6 +29,13 @@ public class TreatmentServiceImpl implements TreatmentService
 		return treatmentDao.getAllTreatments();
 	}
 
+	@Override
+	public Treatment getTreatmentById(Long treatmentId)
+	{
+		return treatmentDao.findById(treatmentId);
+	}
+
+
 	private List<Treatment> mockHeadServices()
 	{
 		//@formatter:off
