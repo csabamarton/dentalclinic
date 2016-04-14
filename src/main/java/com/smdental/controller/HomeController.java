@@ -15,7 +15,7 @@ public class HomeController {
 	@Autowired
 	TreatmentService treatmentService;
 
-	@RequestMapping(value= {"/", "/home"})
+	@RequestMapping(value = { "/", "/home" })
 	public String home(Model model)
 	{
 		List<Treatment> headTreatments = treatmentService.getHeadTreatments(3);
@@ -27,10 +27,15 @@ public class HomeController {
 	@RequestMapping("/treatmentlist")
 	public String treatmentList(Model model)
 	{
-        List<Treatment> headTreatments = treatmentService.getHeadTreatments(3);
+		List<Treatment> headTreatments = treatmentService.getTreatments();
 
-        model.addAttribute("headTreatments", headTreatments);
+		model.addAttribute("headTreatments", headTreatments);
 
-        return "treatmentlist";
+		return "treatmentlist";
+	}
+
+	@RequestMapping("/treatment")
+	public String getTreatment(Model model) {
+		return "treatment";
 	}
 }

@@ -13,7 +13,8 @@ import java.util.List;
 import static com.google.common.truth.Truth.assert_;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"file:src/main/webapp/WEB-INF/dispatcher-servlet.xml"})
+@ContextConfiguration({"file:src/main/webapp/WEB-INF/dispatcher-servlet.xml",
+		"file:src/main/webapp/WEB-INF/applicationContext.xml"})
 public class TreatmentServiceImplTest {
 	protected static Logger logger = Logger.getLogger(TreatmentServiceImplTest.class);
 

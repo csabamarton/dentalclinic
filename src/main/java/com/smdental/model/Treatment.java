@@ -1,11 +1,22 @@
 package com.smdental.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Treatment {
 
-	Long treatmentId;
-	String treatmentName;
-	String description;
-	Double price;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long treatmentId;
+
+	private String treatmentName;
+
+	private String description;
+
+	private Double price;
 
 	public Long getTreatmentId()
 	{
