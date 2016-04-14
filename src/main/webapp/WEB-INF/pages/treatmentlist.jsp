@@ -93,7 +93,8 @@
         <ul class="list-group">
             <c:forEach var="treatment" items="${headTreatments}">
                 <a class="list-group-item" href="/treatment/${treatment.treatmentId}"
-                   role="button">${treatment.treatmentName}</a>
+                   role="button">${treatment.treatmentName}<p class="pull-right">$${treatment.price}</p></a>
+
             </c:forEach>
         </ul>
     </div>
