@@ -34,7 +34,7 @@ public class TreatmentDaoImpl extends AbstractDao<Long, Treatment> implements Tr
 	@Override
 	public void deleteTreatment(Long treatmentId)
 	{
-		Query query = getSession().createSQLQuery("delete from Employee where treatment.treatmentid = :id");
+		Query query = getSession().createSQLQuery("delete from Treatment where treatment.treatmentid = :id");
 		query.setLong("id", treatmentId);
 		query.executeUpdate();
 	}

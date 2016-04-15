@@ -12,13 +12,10 @@
 
     <properties>
         <springframework.version>4.2.5.RELEASE</springframework.version>
+        <spring.security.version>4.0.4.RELEASE</spring.security.version>
         <hibernate.version>4.3.6.Final</hibernate.version>
         <mysql.connector.version>5.1.31</mysql.connector.version>
-        <joda-time.version>2.3</joda-time.version>
-        <testng.version>6.9.4</testng.version>
         <mockito.version>1.10.19</mockito.version>
-        <h2.version>1.4.187</h2.version>
-        <dbunit.version>2.2</dbunit.version>
     </properties>
     <dependencies>
 
@@ -55,10 +52,17 @@
             <version>${springframework.version}</version>
         </dependency>
 
+        <!-- Spring Security -->
         <dependency>
             <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-            <version>4.0.4.RELEASE</version>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
         </dependency>
 
         <!-- Hibernate -->

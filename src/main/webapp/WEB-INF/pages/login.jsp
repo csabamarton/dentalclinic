@@ -52,37 +52,6 @@
 
 </head>
 <body onload='document.loginForm.username.focus();'>
-<!--
-	<h1>Spring Security Custom Login Form (XML)</h1>
-
-
-
-		<h3>Login with Username and Password</h3>
--->
-
-<!--  
-		<form name='loginForm' action="<c:url value='/j_spring_security_check' />" method='POST'>
-
-			<table>
-				<tr>
-					<td>User:</td>
-					<td><input type='text' name='username'></td>
-				</tr>
-				<tr>
-					<td>Password:</td>
-					<td><input type='password' name='password' /></td>
-				</tr>
-				<tr>
-					<td colspan='2'><input name="submit" type="submit" value="submit" /></td>
-				</tr>
-			</table>
-
-			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-			
-
-		</form>
--->		
-	</div>
 
 
  <div class="container">
@@ -132,9 +101,7 @@
 <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs" />
 <script src="${bootstrapJs}"></script>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-
-	<spring:url value="/resources/js/jquery-1.10.2.min.js" var="jqueryJS" />
+	<spring:url value="/resources/js/jquery-1.12.3.min.js" var="jqueryJS" />
     <script type="text/javascript" src="${jqueryJS}"></script>
 
 </body>
