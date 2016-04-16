@@ -10,7 +10,9 @@
 
     <http auto-config="true">
 
-        <intercept-url pattern="/admin**" access="hasRole('ROLE_USER')" />
+        <access-denied-handler error-page="/accessdenied" />
+        <intercept-url pattern="/" access="permitAll" />
+        <intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
 
         <form-login
                 login-page="/login"
@@ -19,18 +21,15 @@
                 authentication-failure-url="/login?error"
                 username-parameter="username"
                 password-parameter="password"/>
-
         <logout logout-url="/j_spring_security_logout"/>
         <csrf />
     </http>
 
+
     <authentication-manager>
-        <authentication-provider>
-            <user-service>
-                <user name="csmarton" password="12345" authorities="ROLE_USER" />
-            </user-service>
-        </authentication-provider>
+        <authentication-provider user-service-ref="customUserDetailsService"/>
     </authentication-manager>
 
+    <beans:bean id="customUserDetailsService" class="com.smdental.security.CustomUserDetailsService" />
 
 </beans:beans>

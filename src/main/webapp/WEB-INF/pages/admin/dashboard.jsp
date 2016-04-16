@@ -73,7 +73,7 @@
 
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                        class="fa fa-user"></i> Account <b class="caret"></b></a>
+                        class="fa fa-user"></i> ${user} <b class="caret"></b></a>
                 <ul class="dropdown-menu">
 
                     <li>
