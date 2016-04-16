@@ -7,6 +7,7 @@ The technology stack is the following:
 Bootstrap
 Jsp
 SpringMVC
+Spring Security
 Hibernate
 MySQL
 AngularJS
