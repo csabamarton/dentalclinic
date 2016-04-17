@@ -35,6 +35,11 @@ public class TreatmentServiceImpl implements TreatmentService
 		return treatmentDao.findById(treatmentId);
 	}
 
+	@Override
+	public void insertTreatment(Treatment treatment) {
+		treatmentDao.insertTreatment(treatment);
+	}
+
 
 	private List<Treatment> mockHeadServices()
 	{

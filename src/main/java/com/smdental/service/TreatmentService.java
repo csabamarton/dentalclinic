@@ -10,4 +10,6 @@ public interface TreatmentService {
 	List<Treatment> getTreatments();
 
 	Treatment getTreatmentById(Long treatmentId);
+
+	void insertTreatment(Treatment treatment);
 }

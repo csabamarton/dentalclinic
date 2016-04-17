@@ -132,9 +132,25 @@
                     </div>
                 </div>
                 <div class="row">
-
-                    <a href="<spring:url value="saveTreatment" />" class="btn btn-primary">Save
-                    </a>
+                    <form:form action="${pageContext.request.contextPath}/admin/saveTreatment" commandName="treatment"
+                               method="post">
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <form:input path="treatmentName" id="name" class="form-Control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Description</label>
+                            <form:textarea path="description" id="price" rows="5" cols="30"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Price</label>
+                            <form:input path="price" id="price" class="form-Control"/>
+                        </div>
+                        <br/><br/>
+                        <input type="submit" class="bnt btn-default">
+                        <a href="<spring:url value="dashboard" />" class="btn btn-primary">Cancel
+                        </a>
+                    </form:form>
                 </div>
             </div>
 
